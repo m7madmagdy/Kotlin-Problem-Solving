@@ -1,4 +1,4 @@
-package codeWars
+package codeWars.kotlin
 
 
 fun main() {

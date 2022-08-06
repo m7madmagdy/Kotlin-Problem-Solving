@@ -1,7 +1,6 @@
-package codeWars
+package codeWars.kotlin
 
 //Link: https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097/train/kotlin
-
 
 fun main() {
     print(

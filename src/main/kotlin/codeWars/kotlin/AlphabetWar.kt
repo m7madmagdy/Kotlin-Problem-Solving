@@ -1,4 +1,4 @@
-package codeWars
+package codeWars.kotlin
 
 //Link: https://www.codewars.com/kata/59377c53e66267c8f6000027/train/kotlin
 

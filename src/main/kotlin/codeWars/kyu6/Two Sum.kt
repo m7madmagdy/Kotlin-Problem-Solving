@@ -9,14 +9,33 @@ fun main() {
 }
 
 
-fun twoSum(numbers: IntArray, target: Int): Pair<Int, Int> {
-    numbers.indices.forEach { i ->
-        for (j in i + 1 until numbers.size) {
-            if (numbers[i] + numbers[j] == target) {
-                return Pair(i, j)
-            }
+fun twoSum(numbers: IntArray, target: Int): IntArray {
+    val map = mutableMapOf<Int, Int>()
+    numbers.forEachIndexed { index, num ->
+        if (map.containsKey(target - num)) {
+            return intArrayOf(map[target - num]!!, index)
         }
+        map[num] = index
     }
-    return Pair(-1, -1)
+    return intArrayOf()
 }
 
+
+//    val map = mutableMapOf<Int, Int>()
+//    numbers.forEachIndexed { index, i ->
+//        if (map.containsKey(target - i)) {
+//            return Pair(map[target - i]!!, index)
+//        }
+//        map[i] = index
+//    }
+//    return Pair(0, 0)
+
+
+//numbers.indices.forEach { i ->
+//    for (j in i + 1 until numbers.size) {
+//        if (numbers[i] + numbers[j] == target) {
+//            return Pair(i, j)
+//        }
+//    }
+//}
+//return Pair(-1, -1)

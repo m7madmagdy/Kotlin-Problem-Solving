@@ -4,7 +4,6 @@ import java.util.*
 
 //Link: https://www.hackerrank.com/challenges/solve-me-first/problem?isFullScreen=true
 
-
 fun solveMeFirst(a: Int, b: Int): Int {
     return a + b
 }

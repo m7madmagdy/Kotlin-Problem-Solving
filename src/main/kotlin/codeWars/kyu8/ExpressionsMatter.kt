@@ -17,5 +17,5 @@ fun expressionsMatter(a: Int, b: Int, c: Int): Int {
     val con4 = (a + b) * c
     val con5 = a + b + c
 
-    return maxOf(con1, con2,con3,con4,con5)
+    return maxOf(con1, con2, con3, con4, con5)
 }

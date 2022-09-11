@@ -11,9 +11,9 @@ fun main() {
 
 //Solution
 fun century(number: Int): Int {
-    return if (number % 100 != 0) {
-        (number / 100) + 1
-    } else {
+    return if (number % 100 == 0) {
         number / 100
+    } else {
+        number / 100 + 1
     }
 }

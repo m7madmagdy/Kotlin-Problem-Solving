@@ -1,7 +1,10 @@
 package dataStructures.stack
 
-// TODO: Stack Data Structures: The stack data structure is identical in
-//  concept to a physical stack of objects. When you add an item to a stack, you place
-//  it on top of the stack. When you remove an item from a stack, you always remove
-//  the topmost item. Stacks are useful, and also exceedingly simple. The main goal of
-//  building a stack is to enforce how you access your data.
+// TODO: There are only two essential operations for a stack:
+//  1• push: Adding an element to the top of the stack.
+//  2• pop: Removing the top element of the stack.
+
+interface Stack<Element> {
+    fun push(element: Element)
+    fun pop(): Element?
+}

@@ -1,26 +1,18 @@
 package codeWars.kyu7
 
-//Link: https://www.codewars.com/kata/59377c53e66267c8f6000027/train/kotlin
-
-fun main() {
-    print(
-        alphabetWar("o")
-    )
-}
-
-//Solution
 fun alphabetWar(fight: String): String {
-    val leftSide = mapOf('w' to 4, 'p' to 3, 'b' to 2, 's' to 1)
-    val rightSide = mapOf('m' to -4, 'q' to -3, 'd' to -2, 'z' to -1)
-    val forces = leftSide + rightSide
-
-    val result = fight.sumOf {
-        forces.getOrDefault(it, 0)
-    }
-
+    val forces = mapOf('w' to 4, 'p' to 3, 'b' to 2, 's' to 1, 'm' to -4, 'q' to -3, 'd' to -2, 'z' to -1)
+    val result = fight.mapIndexed { index, c -> if (c == '*' || (index - 1 >= 0 && fight[index - 1] == '*') || (index + 1 <= fight.lastIndex && fight[index + 1] == '*')) 0 else forces.getOrDefault(c, 0) }
+        .sumBy { it }
     return when {
         result > 0 -> "Left side wins!"
         result < 0 -> "Right side wins!"
         else -> "Let's fight again!"
     }
+}
+
+fun main() {
+    println(alphabetWar("s*zz"))
+    println(alphabetWar("www*www****z"))
+    println(alphabetWar("sz**z**zs"))
 }

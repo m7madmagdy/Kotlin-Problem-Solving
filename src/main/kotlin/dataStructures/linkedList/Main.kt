@@ -6,20 +6,21 @@ package dataStructures.linkedList
 //  and removal from the front of the list, and other reliable performance characteristics.
 
 fun main() {
-    val node1 = Node(1)
-    val node2 = Node(2)
-    val node3 = Node(3)
-    node1.next = node2
-    node2.next = node3
-    println(node1)
+    val list = LinkedList()
+    list.add(1)
+    list.add(2)
+    list.add(3)
 
-    "push" example {
-        val list = LinkedList<Int>()
-        list.push(3)
-        list.push(2)
-        list.push(1)
-        println(list)
-    }
+    println(list.remove())  // prints 3
+    println(list.remove())  // prints 2
+    println(list.remove())  // prints 1
+    println(list.remove())  // prints null
 }
 
-private infix fun String.example(function: () -> Unit) {}
+/*
+Linked lists have a time complexity of O(1) for adding and removing elements
+at the beginning of the list, but a time complexity of O(n) for accessing elements
+by index or searching for an element. They have a space complexity of O(n),
+as the number of elements in the list is directly proportional
+to the amount of memory needed to store the list.
+*/

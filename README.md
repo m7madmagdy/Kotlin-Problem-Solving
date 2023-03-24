@@ -1,6 +1,5 @@
 ## Problem Solving Famous Websites (CodeWars - HackerRank)
-[![CodeWars Profile Badge](https://www.codewars.com/users/m7madmagdy/badges/micro)](https://www.codewars.com/users/m7madmagdy)
-[![Kotlin Badge](https://img.shields.io/badge/Kotlin-black?style=flat-square&logo=Kotlin)](https://kotlinlang.org)
+[![CodeWars Profile Badge](https://www.codewars.com/users/m7madmagdy/badges/large)](https://www.codewars.com/users/m7madmagdy)
 
 # Code Wars
 
